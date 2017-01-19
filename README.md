@@ -49,8 +49,7 @@ sudo apt-get install p7zip-full
 # 3. Fetch and modifiy Mozilla Firefox's runtime files xulrunner into zotero-standalone-build/xulrunner directory
 
 ```shell
-./fetch_xulrunner.sh -p w
-./fetch_xulrunner.sh -p l
+./fetch_xulrunner.sh -p wl
 ```
 
 These commands will fetch Firefox's runtime files for Windows and Linux platform. We don't support any MAC platform builds. If it is also required, further dependencies needed also.
@@ -105,7 +104,7 @@ cd ../../zotero-standalone-build
 You'll have to run ./build.sh with next possible options:
 
 | # | parameter | option | value | description |
-|---|-----------|-------|-------------|
+|---|-----------|--------|-------|-------------|
 | 1 | XPI build folder | -d | work folder /zotero-build/xpi/build/zotero | previously built zotero core's folder |
 | 2 | platform | -p | string from characters l, w and m | build to Linux / Windows / Mac platform. Giving more chars from set (l, w, m) means building to each given character's platform |
 | 3 | XPI file | -f | path to XPI file | you can use this instead of passing built XPI folder by -d option |
@@ -121,7 +120,7 @@ ln -s ../zotero
 Run command to build standalone:
 
 ```shell
-./build.sh -p l -f ../zotero-build/xpi/build/zotero-build.xpi
+./build.sh -p wl -f ../zotero-build/xpi/build/zotero-build.xpi -c release
 ```
 
 

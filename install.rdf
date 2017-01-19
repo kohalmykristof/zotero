@@ -17,7 +17,7 @@
     <em:optionsURL>chrome://zotero/content/preferences/preferences.xul</em:optionsURL>
     <em:aboutURL>chrome://zotero/content/about.xul</em:aboutURL>
     <em:iconURL>chrome://zotero/skin/zotero-new-z-48px.png</em:iconURL>
-    <em:updateURL>https://www.zotero.org/download/update-source.rdf</em:updateURL>
+    <em:updateURL>https://vogon.feti.hu/update-source.rdf</em:updateURL>
     <em:multiprocessCompatible>false</em:multiprocessCompatible>
     <em:type>2</em:type> <!-- type=extension --> 
     

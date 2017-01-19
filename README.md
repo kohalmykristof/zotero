@@ -1,3 +1,7 @@
+Changes and documentation available on branch 4.0!
+======
+See https://github.com/kohalmykristof/zotero/tree/4.0
+
 Zotero
 ======
 [![Build Status](https://travis-ci.org/zotero/zotero.svg?branch=master)](https://travis-ci.org/zotero/zotero)

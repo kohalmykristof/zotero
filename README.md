@@ -1,5 +1,7 @@
-Changes and documentation available on branch 4.0!
+Zotero Standalone Build - How to
 ======
+Changes and documentation available on branch 4.0!
+
 See https://github.com/kohalmykristof/zotero/tree/4.0
 
 Zotero

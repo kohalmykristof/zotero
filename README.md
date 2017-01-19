@@ -15,7 +15,7 @@ Zotero build repository. Modified build scripts.
 
 Clone to your work folder also.
 
-## 1.3. https://github.com/zotero/zotero-standalone-build
+## 1.3. https://github.com/kohalmykristof/zotero-standalone-build
 
 Zotero standalone build repository. Original from zotero's github. Clone to your work folder also.
 
@@ -65,7 +65,7 @@ You can do this build in zotero-build repository's xpi subfolder (see 1.2.).
 cd ../zotero-build/xpi
 ```
 
-You'll have to use build_xpi_4.0 script with next parameters:
+You'll have to use build_xpi_4.0 script with 6 arguments in the next order:
 
 | # | parameter | value | description |
 |---|-----------|-------|-------------|
@@ -93,6 +93,37 @@ Note: versioning in core need a concatenated '.SOURCE' which is stripped in XPI 
 If you need to revert, delete everything in zotero-build/xpi/build folder except .gitignore file.
 
 Note: further developments - use this built XPI file to create signed Mozilla Add-On available in addons.mozilla.org (AMO).
+
+# 5. Build Zotero Standalone
+
+First, you have to switch into zotero-standalone repository's folder:
+
+```shell
+cd ../../zotero-standalone-build
+```
+
+You'll have to run ./build.sh with next possible options:
+
+| # | parameter | option | value | description |
+|---|-----------|-------|-------------|
+| 1 | XPI build folder | -d | work folder /zotero-build/xpi/build/zotero | previously built zotero core's folder |
+| 2 | platform | -p | string from characters l, w and m | build to Linux / Windows / Mac platform. Giving more chars from set (l, w, m) means building to each given character's platform |
+| 3 | XPI file | -f | path to XPI file | you can use this instead of passing built XPI folder by -d option |
+| 4 | Channel | -c | | |
+| 5 | Staging | -s | --- | Switch for building binaries into staging/ directory without packageing
+
+Probably you'll have to create a symbolic link of zotero core folder into zotero-standalone-build directory:
+
+```shell
+ln -s ../zotero
+```
+
+Run command to build standalone:
+
+```shell
+./build.sh -p l -f ../zotero-build/xpi/build/zotero-build.xpi
+```
+
 
 Zotero
 ======

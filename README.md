@@ -56,7 +56,9 @@ These commands will fetch Firefox's runtime files for Windows and Linux platform
 
 # 4. Build XPI from Zotero source
 
-XPI building from Zotero Core in your work folder's zotero subdirectory (see 1.1.).
+XPI building and signing by Mozilla from Zotero Core in your work folder's zotero subdirectory (see 1.1.).
+
+# 4.1. Create built XPI archive
 
 You can do this build in zotero-build repository's xpi subfolder (see 1.2.).
 
@@ -91,7 +93,23 @@ Note: versioning in core need a concatenated '.SOURCE' which is stripped in XPI 
 
 If you need to revert, delete everything in zotero-build/xpi/build folder except .gitignore file.
 
-Note: further developments - use this built XPI file to create signed Mozilla Add-On available in addons.mozilla.org (AMO).
+# 4.2. Create signed Mozilla Add-On available in addons.mozilla.org (AMO)
+
+Use previously built XPI file (see 4.1.) to make signed Mozilla Add-On.
+
+First, you'll need Mozilla's jpm package, available on npm:
+
+```shell
+npm install jpm
+```
+
+Sign built XPI file by Mozilla:
+```shell
+cd build
+jpm sign --api-key YOUR_API_KEY --api-secret YOUR_API_SECRET --xpi ./zotero-build.xpi
+```
+
+If signing finished well, you will get a signed XPI file into your current folder named as 'zotero_patch-4.0.29.17.FETI-fx.xpi'. If version is already signed, its signed XPI file is available in your AMO account (http://addons.mozilla.org).
 
 # 5. Build Zotero Standalone
 
@@ -120,7 +138,7 @@ ln -s ../zotero
 Run command to build standalone:
 
 ```shell
-./build.sh -p wl -f ../zotero-build/xpi/build/zotero-build.xpi -c release
+./build.sh -p wl -f ../zotero-build/xpi/build/zotero_patch-4.0.29.17.FETI-fx.xpi -c release
 ```
 
 

@@ -7,13 +7,13 @@
     <RDF:Seq>
       <RDF:li>
         <RDF:Description>
-          <version>4.0.29.17.FETI.SOURCE</version>
+          <version>4.0.29.17.2.FETI.SOURCE</version>
           <targetApplication>
             <RDF:Description>
               <id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</id>
               <minVersion>45.0</minVersion>
               <maxVersion>*</maxVersion>
-              <updateLink>http://vogon.feti.hu/zotero.xpi</updateLink>
+              <updateLink>http://mail.feti.hu/vogon/zotero.xpi</updateLink>
               <updateHash>sha1:</updateHash>
             </RDF:Description>
           </targetApplication>
